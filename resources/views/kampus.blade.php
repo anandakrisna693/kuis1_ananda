@@ -34,6 +34,18 @@
 
         </div>
 
+        <div class="foto-kampus-dua">
+
+        <div class="foto1">
+            <img src="{{ asset('images/gedung.jpeg') }}" alt="Foto Kampus">
+        </div>
+
+        <div class="foto2">
+            <img src="{{ asset('images/gedung1.jpeg') }}" alt="Foto Kampus">
+        </div>
+
+        </div>
+
 
         <div class="program">
 

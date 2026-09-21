@@ -154,9 +154,25 @@
             line-height: 1.6;
         }
 
-
+        
+        }
+        .foto-kampus-dua {
+            display: flex;
+            gap: 20px;
+            margin: 0 20px 40px;
         }
 
+        .foto1,
+        .foto2 {
+            width: 50%;
+        }
+
+        .foto1 img,
+        .foto2 img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
         
 
 
