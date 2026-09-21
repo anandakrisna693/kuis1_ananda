@@ -61,6 +61,30 @@
 
 @endforeach
 
+<div class="keunggulan">
+
+    <h2>Keunggulan Kampus</h2>
+
+    <div class="daftar">
+
+        @foreach ($keunggulan as $k)
+
+            <div class="card">
+
+                <h3>{{ $k['nama'] }}</h3>
+
+                <p>
+                    {{ $k['deskripsi'] }}
+                </p>
+
+            </div>
+
+        @endforeach
+
+    </div>
+
+</div>
+
             </div>
 
         </div>
@@ -68,5 +92,13 @@
         </div>
 
     </div>
+    <main>
+
+    <div class="main">
+    </div>
+
+    @yield('content')
+
+</main>
 
 @endsection

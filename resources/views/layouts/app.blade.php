@@ -38,10 +38,22 @@
 
         main {
             padding: 40px 8%;
+
+            background-image:
+        linear-gradient(
+            rgba(244, 246, 248, 0.85),
+            rgba(244, 246, 248, 0.85)
+        ),
+        url('/images/gedung1.jpeg');
+
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
         }
 
         .bagian-atas {
-            background-color: #1d5d9b;
+            background-color: #123c69;
             color: white;
             padding: 50px;
             margin-bottom: 40px;
@@ -90,7 +102,7 @@
         }
 
         .card h3 {
-            color: #1d5d9b;
+            color: #123c69;
             margin-bottom: 10px;
         }
 
@@ -101,17 +113,56 @@
 
         @media (max-width: 768px) {
 
-            .card {
-                width: 100%;
-                margin: 10px 0;
+        .card {
+            width: 100%;
+            margin: 10px 0;
             }
 
-            .bagian-atas h1 {
-                font-size: 30px;
+        .bagian-atas h1 {
+            font-size: 30px;
             }
+
+        .keunggulan {
+            margin-top: 40px;
+        }
+
+        .keunggulan h2 {
+            margin-bottom: 20px;
+        }
+
+        .daftar {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 220px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
 
         }
 
+        
+
+
+        
+        
+        
     </style>
 </head>
 
