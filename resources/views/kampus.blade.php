@@ -18,6 +18,12 @@
 
     <div class="isi">
 
+<div class="foto-kampus">
+
+    <img src="{{ asset('images/kampus2.jpeg') }}" alt="Foto Kampus">
+
+</div>
+
         <div class="tentang">
 
             <h2>Tentang Kampus</h2>
@@ -39,22 +45,21 @@
 
             <div class="daftar">
 
-                @foreach ($jurusan as $j)
+               @foreach ($jurusan as $j)
 
-                    <div class="card">
+    <div class="card">
 
-                        <h3>
-                            {{ $loop->iteration }}. {{ $j }}
-                        </h3>
+        <h3>
+            {{ $loop->iteration }}. {{ $j['nama'] }}
+        </h3>
 
-                        <p>
-                            Program studi yang membantu mahasiswa
-                            mengembangkan pengetahuan dan keterampilan.
-                        </p>
+        <p>
+            {{ $j['deskripsi'] }}
+        </p>
 
-                    </div>
+    </div>
 
-                @endforeach
+@endforeach
 
             </div>
 
