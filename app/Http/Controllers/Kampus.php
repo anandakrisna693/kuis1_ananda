@@ -8,7 +8,8 @@ class Kampus extends Controller
     {
         $namaKampus = 'Politeknik Negeri Malang PSDKU Pamekasan';
 
-        $deskripsi = 'Politeknik Negeri Malang PSDKU Pamekasan merupakan salah satu kampus yang menyediakan pendidikan vokasi dengan berbagai program studi.';
+        $deskripsi = 'Politeknik Negeri Malang PSDKU Pamekasan merupakan salah satu kampus yang menyediakan pendidikan vokasi dengan berbagai program studi yang dirancang untuk membekali mahasiswa dengan pengetahuan dan keterampilan sesuai dengan kebutuhan dunia kerja. Proses pembelajaran tidak hanya berfokus pada teori, tetapi juga memberikan kesempatan kepada mahasiswa untuk mengembangkan kemampuan praktis melalui berbagai kegiatan pembelajaran dan praktik.
+         Dengan lingkungan akademik yang mendukung, kampus ini menjadi salah satu pilihan bagi mahasiswa yang ingin meningkatkan kemampuan, pengalaman, serta kompetensi di bidang yang diminati. Melalui pendidikan yang diberikan, mahasiswa diharapkan mampu menjadi lulusan yang kompeten, mandiri, dan siap menghadapi berbagai tantangan di dunia kerja maupun perkembangan teknologi di masa depan.';
 
         $jurusan = [
             [

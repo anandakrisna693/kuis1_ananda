@@ -1,207 +1,38 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <title>@yield('title')</title>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-    <style>
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    </head>
+    <body class="font-sans antialiased">
+         <!-- Navbar -->
+    @include('layouts.navigation')
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
-        }
-
-        /* Header */
-
-        header {
-            background-color: #123c69;
-            color: white;
-            padding: 20px 8%;
-        }
-
-        .nama-kampus {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        /* Isi */
-
-        main {
-            padding: 40px 8%;
-
-            background-image:
-        linear-gradient(
-            rgba(244, 246, 248, 0.85),
-            rgba(244, 246, 248, 0.85)
-        ),
-        url('/images/gedung1.jpeg');
-
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-
-        }
-
-        .bagian-atas {
-            background-color: #123c69;
-            color: white;
-            padding: 50px;
-            margin-bottom: 40px;
-        }
-
-        .bagian-atas h1 {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .bagian-atas p {
-            line-height: 1.7;
-        }
-
-        .tentang {
-            background-color: white;
-            padding: 30px;
-            margin-bottom: 40px;
-        }
-
-        .tentang h2 {
-            color: #123c69;
-            margin-bottom: 15px;
-        }
-
-        .tentang p {
-            line-height: 1.8;
-        }
-
-        .program {
-            margin-bottom: 40px;
-        }
-
-        .program h2 {
-            color: #123c69;
-            margin-bottom: 10px;
-        }
-
-        .card {
-            display: inline-block;
-            width: 31%;
-            background-color: white;
-            padding: 25px;
-            margin: 10px 1%;
-            vertical-align: top;
-        }
-
-        .card h3 {
-            color: #123c69;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            line-height: 1.6;
-        }
-
-
-        @media (max-width: 768px) {
-
-        .card {
-            width: 100%;
-            margin: 10px 0;
-            }
-
-        .bagian-atas h1 {
-            font-size: 30px;
-            }
-
-        .keunggulan {
-            margin-top: 40px;
-        }
-
-        .keunggulan h2 {
-            margin-bottom: 20px;
-        }
-
-        .daftar {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            flex: 1;
-            min-width: 220px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            line-height: 1.6;
-        }
-
-        
-        }
-        .foto-kampus-dua {
-            display: flex;
-            gap: 20px;
-            margin: 0 20px 40px;
-        }
-
-        .foto1,
-        .foto2 {
-            width: 50%;
-        }
-
-        .foto1 img,
-        .foto2 img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-        
-
-
-        
-        
-        
-    </style>
-</head>
-
-<body>
-
-    <header>
-
-        <div class="header">
-
-            <div class="nama-kampus">
-                POLINEMA PSDKU PAMEKASAN
+    <!-- Page Heading -->
+    @isset($header)
+        <header class="bg-white border-bottom">
+            <div class="container py-4">
+                {{ $header }}
             </div>
+        </header>
+    @endisset
 
+            <!-- Page Content -->
+            <main>
+                @yield('content')
+            </main>
         </div>
-
-    </header>
-
-
-    <main>
-
-        @yield('content')
-
-    </main>
-</body>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
